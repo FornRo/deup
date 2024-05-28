@@ -7,7 +7,7 @@ from datetime import datetime
 from requests import RequestException
 from requests import get as requests_get_page
 
-from my_lib import MultyRes, MyConstant
+from .my_lib import MultyRes, MyConstant
 
 
 class DeuParser:

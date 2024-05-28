@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path, PurePath
 from datetime import datetime
 
-from my_lib import MyConstant
+from .my_lib import MyConstant
 
 
 class PdExel:
