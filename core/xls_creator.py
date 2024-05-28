@@ -15,7 +15,7 @@ class PdExel:
         self.data = {key: [] for key in self.columns}
 
     def _init_path(self, file_name: str = None, dir_path=None):
-        dir_path: Path = Path.cwd().parent if dir_path is None else Path(dir_path).resolve()
+        dir_path: Path = Path.cwd() if dir_path is None else Path(dir_path).resolve()
         file_name: str = file_name or "my_dictitionaty.xls"
 
         check_exists: bool = Path(dir_path / file_name).exists()
