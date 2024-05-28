@@ -54,7 +54,7 @@ if __name__ == '__main__':
     pd_exel = PdExel()
 
     data: dict = {
-        '/': ['0%', '0%', '0%'],
+        'Learned': ['0%', '0%', '0%'],
         'Tags': ['my_tag#1', 'test', "my_tag#3"],
         'Word': ['test1', 'test2', 'test3'],
         'Transcription': [None, None, None],

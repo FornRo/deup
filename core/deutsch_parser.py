@@ -106,7 +106,7 @@ class DeuParser:
         range_by_len_columns = range(len(res['start_word']))
 
         # adapting for xls
-        res['/'] = ['0%' for _ in range_by_len_columns]
+        res['Learned'] = ['0%' for _ in range_by_len_columns]
         res['Tags'] = [today for _ in range_by_len_columns]
         res['Word'] = res['word_with_article']
         res['Transcription'] = [None for _ in range_by_len_columns]
