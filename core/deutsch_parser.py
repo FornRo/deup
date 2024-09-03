@@ -41,7 +41,7 @@ class DeuParser:
             if self.soup.find('div', class_="rCntr").text.strip() == MyConstant.WERBUNG.value:
                 raise MultyRes("U got MultyRes in qwr_set")
 
-            self.res_data['word_with_article'] = self.soup.find('div', class_="rCntr").text.strip()
+            self.res_data['word_with_article'] = self.soup.find('div', class_="rCntr rClear").text.strip()
             self.set_example_uk()
             self.set_translate_uk()
             self.set_context_data()
