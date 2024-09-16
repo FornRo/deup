@@ -41,6 +41,7 @@ class DeuParser:
             if self.soup.find('div', class_="rCntr").text.strip() == MyConstant.WERBUNG.value:
                 raise MultyRes("U got MultyRes in qwr_set")
 
+            # TODO need add for Nomen Pl form in end. example: (das Buch -"e)
             self.res_data['word_with_article'] = self.soup.find('div', class_="rCntr rClear").text.strip()
             self.set_example_uk()
             self.set_translate_uk()
@@ -107,6 +108,7 @@ class DeuParser:
 
         # adapting for xls
         res['Learned'] = ['0%' for _ in range_by_len_columns]
+        # TODO need add tag for Nomen or Verb. example: (2024_09_15, Nomen), (2024_09_15, Verb)
         res['Tags'] = [today for _ in range_by_len_columns]
         res['Word'] = res['word_with_article']
         res['Transcription'] = [None for _ in range_by_len_columns]
