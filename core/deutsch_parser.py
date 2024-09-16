@@ -59,6 +59,7 @@ class DeuParser:
 
     def set_none_data(self):
         self.res_data['word_with_article'] = None
+        self.res_data['tags'] = None
         self.res_data["main_translate_uk"] = None
         self.res_data["translate_uk"] = None
         self.res_data["example"] = None
@@ -91,7 +92,9 @@ class DeuParser:
 
     def getter_words_data_collector(self, words: list[str] = None):
         for word in words:
-            self.res_datas.append(self.getter_word(word=word))
+            addable_word = self.getter_word(word=word)
+            if addable_word['word_with_article']:
+                self.res_datas.append(addable_word)
             self.res_data = {}
         return self.res_datas
 
